@@ -1,0 +1,70 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*{
+  box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bentham', Times New Roman, sans-serif;
+    color: #fff;
+    background: #2d3057;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+header {
+  margin: 0;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Fjalla One', Impact, serif;
+  font-size: 3rem;
+}
+
+#container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem 2rem 5rem;
+  background: #6b333b;
+  max-width: 1200px;
+}
+
+p {
+  max-width: 35rem;
+}
+
+#text {
+  align-self: center;
+}
+#byLine {
+  text-align: center;
+}
+#map2 {
+  height: 20rem;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 730px) {
+  #container {
+    padding: 0rem;
+    margin: 0;
+  }
+  p {
+    margin: 1rem;
+  }
+  #map1 {
+    height: 30rem;
+    width: 80%;
+  }
+}

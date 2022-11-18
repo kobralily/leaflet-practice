@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Pre-college Education</title>
+
+	<!-- Font elements: -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Fjalla+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="">
+	<link href="styles/first_main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="container">
+	<header>
+		<h1>Locations of My Preschool and K-12 Education</h1>
+	</header>
+
+
+	<div id="map1"></div>
+
+	<div id="text">
+	<p id="byLine">By Olivia Giraldo</p>
+	<p>This is a map of an area in Tampa called "New Tampa." I was born and raised here for my entire life until I left for college. This map shows the locations of my pre-college schools, highlighting their proximity. </p>
+</div>
+</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+	<script>
+
+		let map = L.map('map1').setView([28.146472, -82.348320], 13.4);
+
+		L.tileLayer('https://api.mapbox.com/styles/v1/kobralily/clam0rdn7003815pep1imquv8/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia29icmFsaWx5IiwiYSI6ImNsYW0wbHp1bjA1aWUzbnF0ajBscHMyd2YifQ.ow5SvVC5KGDw0P-S16pctA', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+		}).addTo(map);
+
+		let markerPreSchool = L.marker([28.140137081009836, -82.35383948142373]).addTo(map);
+		markerPreSchool.bindPopup("<b>My Preschool!</b><br>Bright Horizons Preschool").openPopup();
+
+		let markerElementary = L.marker([28.14094521283636, -82.32959280590765]).addTo(map);
+		markerElementary.bindPopup("<b>My elementary school!</b><br>Hunters Green Elementary");
+
+		let markerMiddle = L.marker([28.14140135373376, -82.32417015488463]).addTo(map);
+		markerMiddle.bindPopup("<b>My middle school!</b><br>Benito Middle School");
+
+		let markerHigh = L.marker([28.15890689141274, -82.35444113662106]).addTo(map);
+		markerHigh.bindPopup("<b>My high school!</b><br>Wharton High School");
+
+	</script>
+
+</body>
+</html>
