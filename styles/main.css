@@ -54,6 +54,22 @@ p {
   width: 100%;
 }
 
+a:link {
+  color: #fff;
+}
+a:visited {
+  color: #000;
+}
+a:focus {
+  color: #000;
+}
+a:hover {
+  color: #C5DBF1;
+}
+a:active {
+  color: #E89BE6;
+}
+
 
 @media screen and (max-width: 730px) {
   #container {
